@@ -6,6 +6,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm  i react-bootstrap bootstrap react-icons`
+
+index.js --> import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+### `npm install react-router-dom`
+
+### `npm i react-router-bootstrap`
+
+
+
 ### `npm start`
 
 Runs the app in the development mode.\
