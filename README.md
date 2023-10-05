@@ -16,3 +16,28 @@ Open [http://localhost:5000](http://localhost:5000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+### package.json
+
+....
+....
+....
+  "type": "module", // Specifies that your project uses ES6 modules.
+....
+....
+....
+
+
+"scripts": {
+  // This script starts the Node.js server in the 'backend' directory.
+  "start": "node backend/server.js", 
+
+  // This script uses 'nodemon' to monitor changes in the server.js file and auto-restart the server.
+  "server": "nodemon backend/server.js",
+
+  // This script starts the frontend application in the 'frontend' directory.
+  "client": "npm start --prefix frontend"
+
+   // Concurrently runs both server and client scripts.
+   "dev": "concurrently \"npm run server\" \"npm run client\"" 
+},
