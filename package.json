@@ -1,0 +1,15 @@
+{
+  "name": "ecom",
+  "version": "1.0.0",
+  "description": "ecommerce application using mern stack",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "author": "Jai krishna V.R",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
