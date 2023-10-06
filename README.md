@@ -7,11 +7,17 @@ In the project directory, you can run:
 
 ### `npm i express`
 
-### `npm i -D nodemon concurrently     `
+### `npm i -D nodemon concurrently`
 
 ### `npm start`
 
 ### `npm i -D dotenv `
+
+### `npm i mongoose`
+
+### `npm i bcryptjs`
+
+### ` npm i colors ` //optional one 
 
 Runs the app in the development mode.\
 Open [http://localhost:5000](http://localhost:5000) to view it in your browser.
