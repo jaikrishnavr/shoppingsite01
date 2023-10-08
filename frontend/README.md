@@ -17,6 +17,8 @@ index.js --> import 'bootstrap/dist/css/bootstrap.min.css';
 
 ### `npm i axios`
 
+### `npm i @reduxjs/toolkit react-redux`
+
 
 ### `npm start`
 
