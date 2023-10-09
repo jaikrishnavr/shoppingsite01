@@ -1,7 +1,12 @@
-import React from 'react'
-import{ Row, Col } from 'react-bootstrap'
-import Product from '../components/Products'
-import { useGetProductsQuery } from '../slices/productApiSlice'
+import React from 'react';
+import{ Row, Col } from 'react-bootstrap';
+import Product from '../components/Products';
+
+import { useGetProductsQuery } from '../slices/productApiSlice';
+import Loader from '../components/loader';
+import Message from '../components/Message';
+
+
 
 
 function HomeScreen() {
@@ -11,8 +16,8 @@ function HomeScreen() {
   return (
     <>
 
-    { isLoading ? ( <h2>Loading</h2>) : error ? (
-    <div>{error?.data?.message || error.error}</div>): ( <>
+    { isLoading ? ( <Loader/> ) : error ? (
+    <Message variant="danger">{error?.data?.message || error.error}</Message>): ( <>
       <h1>Latest Products</h1>
       <Row>
           {products.map((product) =>(

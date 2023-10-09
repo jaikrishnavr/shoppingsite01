@@ -3,6 +3,8 @@ import { Link, useParams } from 'react-router-dom'
 import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap';
 import Rating from '../components/Rating';
 import { useGetProductDetailsQuery } from '../slices/productApiSlice';
+import Loader from '../components/loader';
+import Message from '../components/Message';
 
 const ProductScreen = () => {
     const { id: productId } = useParams();
@@ -14,11 +16,11 @@ const {data: product, isLoading, error} = useGetProductDetailsQuery(productId);
         <Link className='btn btn-light my-3' to="/">
             Go back
         </Link>
-
+        
         {isLoading ? (
-        <h2>Loading...</h2>
+      <Loader/>
         ) : error ? (
-            <div>{error?.data?.message || error.error }</div>
+            <Message variant='danger'>{error?.data?.message || error.error }</Message>
         ) : (
              <Row>
              <Col md={5}>
