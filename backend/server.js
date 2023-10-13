@@ -5,6 +5,7 @@ import connectDb from './config/db.js';
 import ProductRouter from './routes/productRoutes.js';
 import userRouters from './routes/userRoutes.js';
 import { errorHandler, notFound } from './middleware/errorMiddleware.js';
+import cookieParser from 'cookie-parser';
 
 
 dotenv.config();
@@ -17,6 +18,10 @@ const app = express();
 // body parser middleware
  app.use(express.json());
  app.use(express.urlencoded({ extended: true}));
+ //Cookie parser middleware
+ app.use(cookieParser());
+
+
 app.get('/',(req,res) => {
     res.send('Api is running...');
 });
