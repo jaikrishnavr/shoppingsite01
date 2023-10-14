@@ -19,6 +19,8 @@ index.js --> import 'bootstrap/dist/css/bootstrap.min.css';
 
 ### `npm i @reduxjs/toolkit react-redux`
 
+### ` npm i react-toastify` or `npm install --save react-toastify`
+
 
 ### `npm start`
 
