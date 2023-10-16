@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import connectDb from './config/db.js';
 import ProductRouter from './routes/productRoutes.js';
 import userRouters from './routes/userRoutes.js';
+import orderRouters from './routes/orderRouter.js';
 import { errorHandler, notFound } from './middleware/errorMiddleware.js';
 import cookieParser from 'cookie-parser';
 
@@ -30,6 +31,7 @@ app.get('/',(req,res) => {
 app.use('/api/products', ProductRouter);
 
 app.use('/api/users', userRouters);
+app.use('/api/orders', orderRouters);
 
 app.use(notFound);
 app.use(errorHandler);
