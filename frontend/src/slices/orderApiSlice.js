@@ -12,14 +12,14 @@ export const orderApiSlice = apiSlice.injectEndpoints({
         }),
         
         getOrderDetails: builder.query({
-            query: (id) => ({
-              url: `${ORDERS_URL}/${id}`,
+            query: (orderId) => ({
+              url: `${ORDERS_URL}/${orderId}`,
             }),
             keepUnusedDataFor: 5,
           }),
 
           payOrder: builder.mutation({
-            query: (orderId, details) => ({
+            query: ({orderId, details}) => ({
                 url: `${ORDERS_URL}/${orderId}/pay`,
                 method: 'PUT',
                 body: { ...details },

@@ -18,7 +18,7 @@ const addOrderItems = asyncHandler (async(req, res) => {
     totalPrice
  } = req.body;
 
-    if (orderItems && orderItems.length === 0) {
+    if (!orderItems && orderItems.length === 0) {
         res.status(400);
         throw new Error('No Order Items');
     } else {
@@ -80,14 +80,14 @@ const updateOrderToPaid  = asyncHandler (async(req, res) => {
  if(order){
     order.isPaid = true;
     order.paidAt = Date.now();
-    order.payementResult = {
-        id: req.boby.id,
-        status: res.body.status,
-        update_time: req.boby.update_time,
-        email_address: req.boby.payer.email_address,
+    order.paymentResult = {
+      id: req.body.id,
+      status: req.body.status,
+      update_time: req.body.update_time,
+      email_address: req.body.payer.email_address,
     };
 
-    const updateOrder = await Order.save();
+    const updateOrder = await order.save();
 
     res.status(200).json(updateOrder);
  } else{
