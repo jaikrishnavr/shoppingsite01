@@ -17,6 +17,8 @@ import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 import store from './store';
 
+import { PayPalScriptProvider } from '@paypal/react-paypal-js';
+
 import { Provider } from 'react-redux';
 import CartScreen from './screens/CartScreen';
 import LoginScreen from './screens/LoginScreen';
@@ -53,7 +55,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
+      <PayPalScriptProvider deferLoading={true}>
+
     <RouterProvider router={router}/>
+      </PayPalScriptProvider>
     </Provider>
   </React.StrictMode>
 );

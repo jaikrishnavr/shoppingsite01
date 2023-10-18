@@ -21,6 +21,7 @@ index.js --> import 'bootstrap/dist/css/bootstrap.min.css';
 
 ### ` npm i react-toastify` or `npm install --save react-toastify`
 
+### ` npm i @paypal/react-paypal-js `
 
 ### `npm start`
 
