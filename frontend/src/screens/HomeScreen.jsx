@@ -3,7 +3,7 @@ import{ Row, Col } from 'react-bootstrap';
 import Product from '../components/Products';
 
 import { useGetProductsQuery } from '../slices/productApiSlice';
-import Loader from '../components/loader';
+import Loader from '../components/Loader';
 import Message from '../components/Message';
 
 

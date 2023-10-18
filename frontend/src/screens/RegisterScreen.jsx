@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import FormContainer from '../components/FormContainer'
 import { Button, Col, Form, Row } from 'react-bootstrap'
-import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { useRegisterMutation } from '../slices/usersApiSlice'
 import { setCredentials } from '../slices/authSlice'
 import { toast } from 'react-toastify'
-import Loader from '../components/loader'
+import Loader from '../components/Loader'
 
 const RegisterScreen = () => {
 

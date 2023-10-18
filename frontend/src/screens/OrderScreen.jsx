@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import Loader from "../components/loader";
+import Loader from "../components/Loader";
 import Message from "../components/Message";
 import { useGetOrderDetailsQuery, useGetPayPalCLientIdQuery, usePayOrderMutation } from "../slices/orderApiSlice";
 import { PayPalButtons, usePayPalScriptReducer } from '@paypal/react-paypal-js';
