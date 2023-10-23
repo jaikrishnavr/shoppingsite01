@@ -23,6 +23,8 @@ In the project directory, you can run:
 
 ### `npm i cookie-parser`
 
+### `npm i multer`
+
 
 
 Runs the app in the development mode.\
