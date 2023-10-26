@@ -4,7 +4,7 @@ const reviewSchema = mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
-        ref: "User",
+        ref: 'User',
     },
     name: {
         type: String,
@@ -19,7 +19,8 @@ const reviewSchema = mongoose.Schema({
         required: true,
     },
 
-},{
+},
+{
     timestamps: true,
 })
 
@@ -28,7 +29,7 @@ const productSchema = new mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
-        ref: "User",
+        ref: 'User',
     },
     name: {
         type: String,
